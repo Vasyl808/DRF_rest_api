@@ -30,6 +30,7 @@ class Order(models.Model):
                     course.participants.remove(self.user)
 
             else:  # Якщо ордер ще не існує (створення)
+                # Додати учасника до курсу
                 course.participants.add(self.user)
 
     def save(self, *args, **kwargs):

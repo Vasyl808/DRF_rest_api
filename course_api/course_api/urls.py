@@ -42,4 +42,6 @@ urlpatterns = [
     path('api/v1/category/<int:pk>', CategoryAPIDetailView.as_view()),
     path('api/v1/course/<int:pk>/lessons/', get_course_lessons),
     path('api/v1/course/<int:pk>/author', add_author),
+    path('api/v1/course/<int:pk>/add_to_wishlist', WishListAPI.as_view()),
+    path('api/v1/course/<int:pk>/add_to_cart', CartAPI.as_view()),
 ]
